@@ -1,0 +1,71 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+/*cor da barra**/
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+ul.topnav li {float: left;}
+/*letra da barra*/
+ul.topnav li a {
+  display:block;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/*Quando passa o mouse no botao da barra*/
+ul.topnav li a:hover:not(.active) {background-color: rgb(53, 29, 14);}
+/*quando ta clicado no botao da barra*/
+ul.topnav li a.active {background-color:rgb(53, 29, 14);}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 700px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
+/*botoes para adicionar pessoas*/
+.button {
+  background-color: rgb(53,29,14);
+  border: none;
+  color: rgb(255, 255, 255); 
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button12Px {
+  font-size: 12px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+/*divisão da lista de pessoas*/
+th,
+td {
+  padding: 4px;
+  text-align: left;
+  border-bottom: 1px solid rgb(53, 29, 14);
+}
+/*quando passa o mouse na lista de pessoas cad*/
+tr:hover {
+  background-color: #c4c3c3;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

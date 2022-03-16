@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <title>PWeb - by Maria Silva</title>
+    <codigoSecreto="1834169065" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="./style/style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <ul class="topnav">
+		<li><a href="./index.html">Início</a></li>
+		<li><a href="./adicionarPessoa.html">Adicionar pessoa</a></li>
+		<li><a href="./listarPessoas.html">Listar pessoas</a></li>
+		<li><a href="./noticias.html">Canais de notícias</a></li>
+		<li><a href="./contato.html">Mande um e-Mail</a></li>
+		<li class="right"><a href="./sobre.html">Sobre o site</a></li>
+	</ul>
+	<div style="padding:0 16px;">
+		<h1>Formulário para edição de pessoas:</h1>
+		<form action="./editarPessoa.html" method="POST">
+			<p>
+				Nome completo *:
+				<input type="text" placeholder="Seu nome completo." id="nome" required name="nome" value="Maria " />
+			</p>
+			<p>
+				e-Mail *:
+				<input type="text" placeholder="nome@dominio.com" id="email" required name="email" value="maria@dominio.com" />
+			</p>
+            <p>
+				Data de nascimento *:
+				<input type="date" placeholder="dd/mm/aaaa" id="dataNascimento" required name="dataNascimento" value="2002-01-08" />
+			</p>
+			<p>Gênero *:</p>
+			<p>
+				<input type="radio" path="genero" value="Masculino" required id="genero1" name="genero" />Masculino
+			</p>
+			<p>
+				<input type="radio" path="genero" value="Feminino" required id="genero2" name="genero" checked="checked" />Feminino
+			</p>
+			<p>
+				<input type="radio" path="genero" value="Não Informado" required id="genero3" name="genero" />Não informar
+			</p>
+
+			<input type="reset" class="button button12Px" value="Reiniciar">
+			<input type="submit" class="button button12Px" value="Editar">
+		</form>
+		<p>* Campo obrigatório</p>
+	</div>
+
+</body>
+
+</html>
