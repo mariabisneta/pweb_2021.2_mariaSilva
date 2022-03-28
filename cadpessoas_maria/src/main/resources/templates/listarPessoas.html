@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <title>PWeb - by Maria Silva</title>
+    <codigoSecreto="1834169065" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="./style/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <ul class="topnav">
+        <li><a href="./index.html">Início</a></li>
+        <li><a href="./adicionarPessoa.html">Adicionar pessoa</a></li>
+        <li><a class="active" href="./listarPessoas.html">Listar pessoas</a></li>
+        <li><a href="./noticias.html">Canais de notícias</a></li>
+        <li><a href="./contato.html">Mande um e-Mail</a></li>
+        <li class="right"><a href="./sobre.html">Sobre o site</a></li>
+    </ul>
+    <div style="padding:0 16px;">
+        <div style="text-align: center;">
+            <h1>Lista de pessoas</h1>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Nome Completo</th>
+                    <th>E-mail</th>
+                    <th>Data de nascimento</th>
+                    <th>Gênero</th>
+                    <th>Editar</th>
+                    <th>Remover</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Maria</td>
+                    <td>
+                        <a href="mailto:maria@dominio.com">maria@dominio.com</a>
+                    </td>
+                    <td>08/01/2002</td>
+                    <td>Feminino</td>
+                    <td>
+                        <a href="./editarPessoa.html">Editar</a>
+                    </td>
+                    <td>
+                        <a href="/remover/1">Remover</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Stella</td>
+                    <td>
+                        <a href="mailto:stella@dominio.com">stella@dominio.com</a>
+                    </td>
+                    <td>05/07/1998</td>
+                    <td>Não sabe</td>
+                    <td>
+                        <a href="./editarPessoa.html">Editar</a>
+                    </td>
+                    <td>
+                        <a href="/remover/2">Remover</a>
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+</body>
+
+</html>
