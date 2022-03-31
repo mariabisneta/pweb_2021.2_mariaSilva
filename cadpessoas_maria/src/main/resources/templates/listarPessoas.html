@@ -2,22 +2,21 @@
 <html lang="pt_br">
 
 <head>
-<title>PWeb - by Maria Silva</title>
-<codigoSecreto ="1834169065" />
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
- <link href="./style/style.css" rel="stylesheet" />
+	<title>PWeb - by Maria Silva</title>
+	<codigoSecreto="1834169065" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link href="./style/style.css" rel="stylesheet" />
 </head>
 
 <body>
 	<ul class="topnav">
-		<li><a href="./index.html">Início</a></li>
-		<li><a href="./adicionarPessoa.html">Adicionar pessoa</a></li>
-		<li><a class="active" href="./listarPessoas.html">Listar
-				pessoas</a></li>
-		<li><a href="./noticias.html">Canais de notícias</a></li>
-		<li><a href="./contato.html">Mande um e-Mail</a></li>
-		<li class="right"><a href="./sobre.html">Sobre o site</a></li>
+		<li><a href="/">Início</a></li>
+		<li><a class="active" href="/adicionarPessoa">Adicionar pessoa</a></li>
+		<li><a href="/listarPessoas">Listar pessoas</a></li>
+		<li><a href="/noticias.html">Canais de notícias</a></li>
+		<li><a href="/contato.html">Mande um e-Mail</a></li>
+		<li class="right"><a href="/sobre.html">Sobre o site</a></li>
 	</ul>
 	<div style="padding: 0 16px;">
 		<div style="text-align: center;">
@@ -40,19 +39,18 @@
 				<tr th:each="pessoa: ${pessoas}">
 					<td th:text="${(pessoa.id}"></td>
 					<td th:text="${(pessoa.nome}"></td>
-					<td><a th:href="'mailto:'+$(pessoa.email)"
-						th:text="${pessoa.email}"></a></td>
-					<td
-						th:text="${#temporals.format(pessoa,dataNascimento,'dd/MM/yyyy')}"></td>
+					<td><a th:href="'mailto:'+$(pessoa.email)" th:text="${pessoa.email}"></a></td>
+					<td th:text="${#temporals.format(pessoa,dataNascimento,'dd/MM/yyyy')}"></td>
 					<td th:text="${pessoa.genero}"></td>
 					<td>
 						<a th:href="@{/editar/{id}(id=${pessoa.id})}">Editar</a>
 					</td>
 					<td>
-					<a th:href="@{/remover/{id}(id=${pessoa.id})}">Remover</a>
-					</td>	
+						<a th:href="@{/remover/{id}(id=${pessoa.id})}">Remover</a>
+					</td>
 				</tr>
 			</tbody>
 		</table>
 </body>
+
 </html>
