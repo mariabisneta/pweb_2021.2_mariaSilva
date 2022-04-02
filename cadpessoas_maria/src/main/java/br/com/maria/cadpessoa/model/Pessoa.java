@@ -34,7 +34,7 @@ public class Pessoa implements Serializable {
 	private String genero;
 
 	@Column(nullable = false)
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	@DateTimeFormat(pattern="yyyy-MM-dd")
 	public long getId() {
 		return id;
 	}

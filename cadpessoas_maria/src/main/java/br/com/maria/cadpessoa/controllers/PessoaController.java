@@ -25,10 +25,10 @@ public class PessoaController {
 
 	@GetMapping("/listarPessoas")
 	public ModelAndView listarPessoas() {
-		List<Pessoa> lista = pessoaRepo.findAll();
-		ModelAndView mav = new ModelAndView("listarPessoas");
-		mav.addObject("pessoas", lista);
-		return mav;
+		List<Pessoa> todasAsPessoas = pessoaRepo.findAll();
+		ModelAndView modelAndView = new ModelAndView("listarPessoas");
+		modelAndView.addObject("todasAsPessoas", todasAsPessoas);
+		return modelAndView;
 	}
-	
+
 }
