@@ -2,80 +2,61 @@
 <html lang="pt_br">
 
 <head>
-<<<<<<< HEAD
 <title>PWeb - by Maria Silva</title>
 <codigoSecreto ="1834169065" />
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <link href="/style/style.css" rel="stylesheet" />
+<link href="/style/style.css" rel="stylesheet" />
 </head>
 
 <body>
 	<ul>
-		<li><a href="/index.html">Início</a></li>
-		<hr />
-		<li><a href="/adicionarPessoa.html">Adicionar pessoa</a></li>
-		<li><a href="/listarPessoas.html" class="active">Listar pessoas</a></li>
-		<hr />
-=======
-	<title>PWeb - by Maria Silva</title>
-	<codigoSecreto="1834169065" />
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link href="./style/style.css" rel="stylesheet" />
-</head>
+		<ul class="topnav">
+			<li><a href="/index.html">Início</a></li>
+			<li><a class="active" href="/adicionarPessoa.html">Adicionar
+					pessoa</a></li>
+			<li><a href="/listarPessoas.html">Listar pessoas</a></li>
+			<li><a href="/noticias.html">Canais de notícias</a></li>
+			<li><a href="/contato.html">Mande um e-Mail</a></li>
+			<li class="right"><a href="/sobre.html">Sobre o site</a></li>
+		</ul>
 
-<body>
-	<ul class="topnav">
-		<li><a href="/">Início</a></li>
-		<li><a class="active" href="/adicionarPessoa">Adicionar pessoa</a></li>
-		<li><a href="/listarPessoas">Listar pessoas</a></li>
->>>>>>> a45ae95291971ddf0ca9472930b1cbd7d3f9ff54
-		<li><a href="/noticias.html">Canais de notícias</a></li>
-		<li><a href="/contato.html">Mande um e-Mail</a></li>
-		<li class="right"><a href="/sobre.html">Sobre o site</a></li>
-	</ul>
-	<div style="padding: 0 16px;">
-		<div style="text-align: center;">
-			<h1>Lista de pessoas</h1>
-		</div>
-		<table>
-			<thead>
-				<tr>
-					<th>id</th>
-					<th>Nome Completo</th>
-					<th>E-mail</th>
-					<th>Data de nascimento</th>
-					<th>Gênero</th>
-					<th>Editar</th>
-					<th>Remover</th>
-				</tr>
-			</thead>
+		<div style="padding: 0 16px;">
+			<div style="text-align: center;">
+				<h1>Lista de pessoas</h1>
+			</div>
+			<table>
+				<thead>
+					<tr>
+						<th>id</th>
+						<th>Nome Completo</th>
+						<th>E-mail</th>
+						<th>Data de nascimento</th>
+						<th>Gênero</th>
+						<th>Editar</th>
+						<th>Remover</th>
+					</tr>
+				</thead>
 
-			<tbody>
-				<tr th:each="pessoa: ${pessoas}">
-<<<<<<< HEAD
-					<td th:text="${pessoa.id}"></td>
-					<td th:text="${pessoa.nome}"></td>
-					<td>
-						<a th:href="'mailto:'+${pessoa.email}" th:text="${pessoa.email}"></a>
-					</td>
-=======
-					<td th:text="${(pessoa.id}"></td>
-					<td th:text="${(pessoa.nome}"></td>
-					<td><a th:href="'mailto:'+$(pessoa.email)" th:text="${pessoa.email}"></a></td>
->>>>>>> a45ae95291971ddf0ca9472930b1cbd7d3f9ff54
-					<td th:text="${#temporals.format(pessoa,dataNascimento,'dd/MM/yyyy')}"></td>
-					<td th:text="${pessoa.genero}"></td>
-					<td>
-					<a th:href="@{/editar/{id}(id=${pessoa.id})}">Editar</a>
-					</td>
-					<td>
-						<a th:href="@{/remover/{id}(id=${pessoa.id})}">Remover</a>
-					</td>
-				</tr>
-			</tbody>
-		</table>
+				<tbody>
+					<tr th:each="pessoa: ${pessoas}">
+						<td th:text="${pessoa.id}"></td>
+						<td th:text="${pessoa.nome}"></td>
+						<td><a th:href="'mailto:'+${pessoa.email}"
+							th:text="${pessoa.email}"></a></td> 
+						<td th:text="${(pessoa.id}"></td>
+						<td th:text="${(pessoa.nome}"></td>
+						<td><a th:href="'mailto:'+$(pessoa.email)"
+							th:text="${pessoa.email}"></a></td> 
+						<td
+							th:text="${#temporals.format(pessoa,dataNascimento,'dd/MM/yyyy')}"></td>
+						<td th:text="${pessoa.genero}"></td>
+						<td><a th:href="@{/editar/{id}(id=${pessoa.id})}">Editar</a>
+						</td>
+						<td><a th:href="@{/remover/{id}(id=${pessoa.id})}">Remover</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
 </body>
-
 </html>
