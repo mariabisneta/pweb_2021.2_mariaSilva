@@ -18,17 +18,23 @@ public class PessoaController {
 	@Autowired
 	PessoaRepository pessoaRepo;
 
+	PessoaController(PessoaRepository pessoaR){
+		this.pessoaRepo = pessoaR;
+	}
+	
 	@GetMapping
 	public String index() {
 		return "index.html";
 	}
 
-	@GetMapping("/listarPessoas")
-	public ModelAndView listarPessoas() {
+	@GetMapping ("/listarPessoas")
+	public String listarPessoas() {
 		List<Pessoa> todasAsPessoas = pessoaRepo.findAll();
+		
 		ModelAndView modelAndView = new ModelAndView("listarPessoas");
 		modelAndView.addObject("todasAsPessoas", todasAsPessoas);
-		return modelAndView;
+		
+		return "listarPessoas.html";
 	}
 
 }

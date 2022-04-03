@@ -10,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import lombok.AllArgsConstructor;
@@ -22,6 +23,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "pessoas")
 
+@SpringBootApplication
 public class Pessoa implements Serializable {
 
 	private static final long serialVersionUID = -2943301481915182458L;

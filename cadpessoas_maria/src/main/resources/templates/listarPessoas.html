@@ -3,25 +3,24 @@
 
 <head>
 <title>PWeb - by Maria Silva</title>
-<codigoSecreto ="1834169065" />
+
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link href="/style/style.css" rel="stylesheet" />
 </head>
 
 <body>
-	<ul>
-		<ul class="topnav">
-			<li><a href="/index.html">Início</a></li>
-			<li><a class="active" href="/adicionarPessoa.html">Adicionar
-					pessoa</a></li>
-			<li><a href="/listarPessoas.html">Listar pessoas</a></li>
-			<li><a href="/noticias.html">Canais de notícias</a></li>
-			<li><a href="/contato.html">Mande um e-Mail</a></li>
-			<li class="right"><a href="/sobre.html">Sobre o site</a></li>
-		</ul>
 
-		<div style="padding: 0 16px;">
+	 <ul class="topnav">
+        <li><a class="active" href="/">Início</a></li>
+        <li><a href="/adicionarPessoa">Adicionar pessoa</a></li>
+        <li><a href="/listarPessoas">Listar pessoas</a></li>
+        <li><a href="/public/noticias.html">Canais de notícias</a></li>
+        <li><a href="/public/contato.html">Mande um e-Mail</a></li>
+        <li class="right"><a href="/public/sobre.html">Sobre o site</a></li>
+    </ul>
+
+		<div style="padding: 0 16px;"> </div>
 			<div style="text-align: center;">
 				<h1>Lista de pessoas</h1>
 			</div>
@@ -39,22 +38,14 @@
 				</thead>
 
 				<tbody>
-					<tr th:each="pessoa: ${pessoas}">
-						<td th:text="${pessoa.id}"></td>
-						<td th:text="${pessoa.nome}"></td>
-						<td><a th:href="'mailto:'+${pessoa.email}"
-							th:text="${pessoa.email}"></a></td> 
-						<td th:text="${(pessoa.id}"></td>
-						<td th:text="${(pessoa.nome}"></td>
-						<td><a th:href="'mailto:'+$(pessoa.email)"
-							th:text="${pessoa.email}"></a></td> 
-						<td
-							th:text="${#temporals.format(pessoa,dataNascimento,'dd/MM/yyyy')}"></td>
-						<td th:text="${pessoa.genero}"></td>
-						<td><a th:href="@{/editar/{id}(id=${pessoa.id})}">Editar</a>
-						</td>
-						<td><a th:href="@{/remover/{id}(id=${pessoa.id})}">Remover</a>
-						</td>
+					<tr th:each="umaPessoa: ${todasAsPessoas}">
+						<td th:text="${umaPessoa.id}"></td>
+						<td th:text="${umaPessoa.nome}"></td>
+						<td><a th:href="'mailto:'+${umaPessoa.email}" th:text="${umaPessoa.email}"></a></td>
+						<td th:text="${#temporals.format(umaPessoa.dataNascimento,'dd/MM/yyyy')}"></td>
+						<td th:text="${umaPessoa.genero}"></td>
+						<td><a th:href="@{/editar/{id}(id=${umaPessoa.id})}">Editar</a></td>
+						<td><a th:href="@{/remover/{id}(id=${umaPessoa.id})}">Remover</a></td>
 					</tr>
 				</tbody>
 			</table>
