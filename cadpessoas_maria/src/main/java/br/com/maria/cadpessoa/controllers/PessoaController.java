@@ -36,5 +36,13 @@ public class PessoaController {
 		
 		return "listarPessoas.html";
 	}
-
+	@GetMapping ("/adicionarPessoa")
+	public String adicionarPessoa() {
+		List<Pessoa> todasAsPessoas = pessoaRepo.findAll();
+		
+		ModelAndView modelAndView = new ModelAndView("adicionarPessoa");
+		modelAndView.addObject("todasAsPessoas", todasAsPessoas);
+		
+		return "adicionarPessoa.html";
+}
 }

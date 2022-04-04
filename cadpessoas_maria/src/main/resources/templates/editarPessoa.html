@@ -6,14 +6,14 @@
     <codigoSecreto="127226304" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <link th:href="@{/style/style.css}" rel="stylesheet" />
+     <link href="/style/style.css" rel="stylesheet" />
 </head>
 
 <body>
 
     <ul class="topnav">
         <li><a href="/">Início</a></li>
-        <li><a href="/adicionarPessoa">Adicionar pessoa</a></li>
+        <li><a  class="active" href="/adicionarPessoa">Adicionar pessoa</a></li>
         <li><a href="/listarPessoas">Listar pessoas</a></li>
         <li><a href="/public/noticias.html">Canais de notícias</a></li>
         <li><a href="/public/contato.html">Mande um e-Mail</a></li>
@@ -21,7 +21,7 @@
     </ul>
 	<div style="padding:0 16px;">
 		<h1>Formulário para edição de pessoas:</h1>
-		<form action="/editarPessoa.html" method="POST">
+		<form action="/editarPessoa" method="POST">
 			<p>
 				Nome completo *:
 				<input type="text" placeholder="Seu nome completo." id="nome" required name="nome" value="Maria " />

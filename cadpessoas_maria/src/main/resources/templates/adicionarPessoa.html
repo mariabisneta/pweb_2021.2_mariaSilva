@@ -2,55 +2,57 @@
 <html lang="pt_br">
 
 <head>
-    <title>PWeb - by Maria Silva</title>
-    <codigoSecreto="127226304" />
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link th:href="@{/style/style.css}" rel="stylesheet" />
-
+<title>PWeb - by Maria Silva</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="/style/style.css" rel="stylesheet" />
 </head>
 
 <body>
-    <ul class="topnav">
-        <li><a href="/">Início</a></li>
-        <li><a class="active" href="/adicionarPessoa">Adicionar pessoa</a></li>
-        <li><a href="/listarPessoas">Listar pessoas</a></li>
-        <li><a href="/public/noticias.html">Canais de notícias</a></li>
-        <li><a href="/public/contato.html">Mande um e-Mail</a></li>
-        <li class="right"><a href="/public/sobre.html">Sobre o site</a></li>
-    </ul>
-    <div style="padding:0 16px;">
-        <h1>Formulário para cadastro de pessoas:</h1>
-        <form method="POST" action="/adicionarPessoa.html">
-            <p>
-                Nome completo *:
-                <input type="text" placeholder="Seu nome completo." required id="nome" name="nome" value="" />
-            </p>
-            <p>
-                e-Mail *:
-                <input type="text" placeholder="nome@dominio.com" required id="email" name="email" value="" />
-            </p>
-            <p>
-                Data de nascimento *:
-                <input type="date" placeholder="dd/mm/aaaa" required id="dataNascimento" name="dataNascimento"
-                    value="" />
-            </p>
-            <p>Gênero *:</p>
-            <p>
-                <input type="radio" name="genero" value="Masculino" required id="genero1" />Masculino
-            </p>
-            <p>
-                <input type="radio" name="genero" value="Feminino" required id="genero2" />Feminino
-            </p>
-            <p>
-                <input type="radio" name="genero" value="Não Informado" required id="genero3" />Não informar
-            </p>
 
-            <input type="reset" class="button button12Px" value="Limpar">
-            <input type="submit" class="button button12Px" value="Adicionar">
-        </form>
-        <p>* Campo obrigatório</p>
-    </div>
+	<ul class="topnav">
+		<li><a href="/">Início</a></li>
+		<li><a class="active" href="/adicionarPessoa">Adicionar
+				pessoa</a></li>
+		<li><a href="/listarPessoas">Listar pessoas</a></li>
+		<li><a href="/public/noticias.html">Canais de notícias</a></li>
+		<li><a href="/public/contato.html">Mande um e-Mail</a></li>
+		<li class="right"><a href="/public/sobre.html">Sobre o site</a></li>
+	</ul>
+	<div style="padding: 0 16px;">
+		<h1>Formulário para cadastro de pessoas:</h1>
+		<form method="POST" action="/adicionarPessoa">
+			<p>
+				Nome completo *: <input type="text" placeholder="Seu nome completo."
+					required id="nome" name="nome" value="" />
+			</p>
+			<p>
+				e-Mail *: <input type="text" placeholder="nome@dominio.com" required
+					id="email" name="email" value="" />
+			</p>
+			<p>
+				Data de nascimento *: <input type="date" placeholder="dd/mm/aaaa"
+					required id="dataNascimento" name="dataNascimento" value="" />
+			</p>
+			<p>Gênero *:</p>
+			<p>
+				<input type="radio" name="genero" value="Masculino" required
+					id="genero1" />Masculino
+			</p>
+			<p>
+				<input type="radio" name="genero" value="Feminino" required
+					id="genero2" />Feminino
+			</p>
+			<p>
+				<input type="radio" name="genero" value="Não Informado" required
+					id="genero3" />Não informar
+			</p>
+
+			<input type="reset" class="button button12Px" value="Limpar">
+			<input type="submit" class="button button12Px" value="Adicionar">
+		</form>
+		<p>* Campo obrigatório</p>
+	</div>
 
 </body>
 
