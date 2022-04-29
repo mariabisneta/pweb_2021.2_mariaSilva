@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/x-icon" href="imagens/lollipop.ico" />
+    <link href="./style.css" rel="stylesheet" />
+    <title>DiabeteShop</title>
+</head>
+
+<body>
+    <img src="imagens/logoFogo.png" alt="DiabeteShop" width="1350" height="200">
+    <ul class="topnav">
+        <li><a href="./index.html">Página inicial</a></li>
+        <li><a href="./adicionarCliente.html">Cadastre-se</a></li>
+        <li><a class="active" href="./adicionarProduto.html">Cadastrar Produto</a></li>
+        <li><a href="./editarCliente.html">Editar Cliente</a></li>
+        <li><a href="./editarProduto.html">Editar Produto</a></li>
+        <li><a href="./listarCliente.html">Listar Cliente</a></li>
+        <li><a href="./listarProdutos.html">Listar Produtos</a></li>
+        <li><a href="./pedidos.html">Meus Pedidos</a></li>
+        <li><a href="./minhaConta.html">Area do cliente (?)</a></li>
+        <li><a href="./produtos.html">PRODUTOS</a></li>
+        <li><a href="./adicionarPedido.html">Sacola de compras</a></li>
+        <li><a href="./contato.html">Fale conosco</a></li>
+        <li><a href="./sobre.html">Sobre nós</a></li>
+    </ul>
+    <div style="padding:0 16px;">
+        <h1>Cadastrar produtro:</h1>
+        <form method="POST" action="/adicionarProduto" <p>
+            Nome do produto*: <input type="text" placeholder="Nome do produto" required id="nome" name="nome"
+                value="" />
+            </p>
+            <p>
+                Marca:* <input type="text" placeholder="Nome da marca" required id="marca" name="marca" value="" />
+            </p>
+            <p>
+                Altura*: <input type="text" placeholder="Altura do produto" required id="altura" name="altura"
+                    value="" />
+            </p>
+            <p>
+                Largura*: <input type="text" placeholder="Largura do produto" required id="largura" name="largura"
+                    value="" />
+            </p>
+            <p>
+                Profundidade*:<input type="text" placeholder="Profundidade" required id="profundidade"
+                    name="profundidade" value="" />
+            </p>
+            <p>
+                Preço*:<input type="text" placeholder="Preço" required id="Preço" name="preco" value="" />
+            </p>
+            <p>
+                Data de Cadastro*:<input type="text" placeholder="dd/mm/aaa" required id="dataCadastro"
+                    name="dataCadastro" value="" />
+            </p>
+            <p>
+                Volume Total*:<input type="text" placeholder="Volume total" required id="volumeTotal" name="volumeTotal"
+                    value="" />
+            </p>
+            <p>
+                Tipo de produto*: <input type="text" placeholder="Tipo de produto" required id="tipoProduto"
+                    name="tipoProduto" value="" />
+            </p>
+            <p>
+                Peso*: <input type="text" placeholder="Peso em gramas" required id="peso" name="peso" value="" />
+            </p>
+            <p>
+                Preço de Venda*: <input type="text" placeholder="Preço de venda" required id="precoDeVenda"
+                    name="precoDeVenda" value="" />
+            </p>
+            <input type="reset" class="button button12Px" value="Limpar">
+            <input type="submit" class="button button12Px" value="Adicionar">
+        </form>
+        <p>* Campo obrigatório</p>
+
+    </div>
+
+</body>
+
+</html>

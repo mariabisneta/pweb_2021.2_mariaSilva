@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/x-icon" href="imagens/lollipop.ico" />
+    <link href="./style.css" rel="stylesheet" />
+    <title>DiabeteShop</title>
+</head>
+
+<body>
+    <img src="imagens/logoFogo.png" alt="DiabeteShop" width="1350" height="200">
+    <ul class="topnav">
+        <li><a href="./index.html">Página inicial</a></li>
+        <li><a href="./adicionarCliente.html">Cadastre-se</a></li>
+        <li><a href="./adicionarProduto.html">Cadastrar Produto</a></li>
+        <li><a href="./editarCliente.html">Editar Cliente</a></li>
+        <li><a href="./editarProduto.html">Editar Produto</a></li>
+        <li><a href="./listarCliente.html">Listar Cliente</a></li>
+        <li><a class="active" href="./listarProdutos.html">Listar Produtos</a></li>
+        <li><a href="./pedidos.html">Meus Pedidos</a></li>
+        <li><a href="./minhaConta.html">Area do cliente (?)</a></li>
+        <li><a href="./produtos.html">PRODUTOS</a></li>
+        <li><a href="./adicionarPedido.html">Sacola de compras</a></li>
+        <li><a href="./contato.html">Fale conosco</a></li>
+        <li><a href="./sobre.html">Sobre nós</a></li>
+    </ul>
+    <div style="padding: 0 16px;"> </div>
+    <div style="text-align: center;">
+        <h1>Lista de clientes cadastrados:</h1>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>idProduto</th>
+                <th>Nome</th>
+                <th>Marca</th>
+                <th>Altura</th>
+                <th>Largura</th>
+                <th>Profundidade</th>
+                <th>Preço</th>
+                <th>Data de Cadastro</th>
+                <th>Volume total</th>
+                <th>Tipo de produto</th>
+                <th>Peso</th>
+                <th>Preço de venda</th>
+                <th>Editar</th>
+                <th>Remover</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr th:each="umProduto: ${todosOsProdutos}">
+                <td th:text="${umProduto.idProduto}"></td>
+                <td th:text="${umProduto.nome}"></td>
+                <td th:text="${umProduto.marca}"></td>
+                <td th:text="${umProduto.altura}"></td>
+                <td th:text="${umProduto.largura}"></td>
+                <td th:text="${umProduto.profunidade}"></td>
+                <td th:text="${umProduto.preco}"></td>
+                <td th:text="${#temporals.format(umProduto.dataCadastro,'dd/MM/yyyy')}"></td>
+                <td th:text="${umProduto.volumeTotal}"></td>
+                <td th:text="${umProduto.tipoDeProduto}"></td>
+                <td th:text="${umProduto.peso}"></td>
+                <td th:text="${umProduto.precoDeVenda}"></td>
+                <td><a th:href="@{/editar/{id}(id=${umaPessoa.id})}">Editar</a></td>
+                <td><a th:href="@{/remover/{id}(id=${umaPessoa.id})}">Remover</a></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

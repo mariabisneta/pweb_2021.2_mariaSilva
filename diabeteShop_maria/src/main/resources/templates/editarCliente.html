@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/x-icon" href="imagens/lollipop.ico" />
+	<link href="./style.css" rel="stylesheet" />
+	<title>DiabeteShop</title>
+</head>
+
+<body>
+	<img src="imagens/logoFogo.png" alt="DiabeteShop" width="1350" height="200">
+	<ul class="topnav">
+		<li><a href="./index.html">Página inicial</a></li>
+		<li><a href="./adicionarCliente.html">Cadastre-se</a></li>
+		<li><a href="./adicionarProduto.html">Cadastrar Produto</a></li>
+		<li><a class="active" href="./editarCliente.html">Editar Cliente</a></li>
+		<li><a href="./editarProduto.html">Editar Produto</a></li>
+		<li><a href="./listarCliente.html">Listar Cliente</a></li>
+		<li><a href="./listarProdutos.html">Listar Produtos</a></li>
+		<li><a href="./pedidos.html">Meus Pedidos</a></li>
+		<li><a href="./minhaConta.html">Area do cliente (?)</a></li>
+		<li><a href="./produtos.html">PRODUTOS</a></li>
+		<li><a href="./adicionarPedido.html">Sacola de compras</a></li>
+		<li><a href="./contato.html">Fale conosco</a></li>
+		<li><a href="./sobre.html">Sobre nós</a></li>
+	</ul>
+	<div style="padding:0 16px;">
+		<h1>Formulário para edição de pessoas:</h1>
+		<form action="/editarPessoa" method="POST">
+			<p>
+				Nome completo *: <input type="text" placeholder="Nome completo." required id="nome" name="nome"
+					value="" />
+			</p>
+
+			<p>Gênero *:</p>
+			<p>
+				<input type="radio" name="genero" value="Masculino" required id="genero1" />Masculino
+			</p>
+			<p>
+				<input type="radio" name="genero" value="Feminino" required id="genero2" />Feminino
+			</p>
+			<p>
+				<input type="radio" name="genero" value="Não Informado" required id="genero3" />Não informar
+			</p>
+			<p>
+				Rua*:<input type="text" placeholder="Rua" required id="rua" name="rua" value="" />
+			</p>
+			<p>
+				Bairro*:<input type="text" placeholder="Bairro" required id="Bairro" name="bairro" value="" />
+			</p>
+			<p>
+				Cidade*:<input type="text" placeholder="Cidade" required id="cidade" name="cidade" value="" />
+			</p>
+			<p>
+				CEP*:<input type="text" placeholder="CEP" required id="cep" name="CEP" value="" />
+			</p>
+			<p>
+				Email *: <input type="text" placeholder="nome@dominio.com" required id="email" name="email" value="" />
+			</p>
+			<p>
+				Celular*: <input type="text" placeholder="1140028922" required id="Celular" name="celular" value="" />
+			</p>
+			<input type="reset" class="button button12Px" value="Reiniciar">
+			<input type="submit" class="button button12Px" value="Editar">
+		</form>
+		<p>* Campo obrigatório</p>
+	</div>
+</body>
+
+</html>
