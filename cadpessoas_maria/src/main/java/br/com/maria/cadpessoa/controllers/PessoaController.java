@@ -11,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 import br.com.maria.cadpessoa.model.Pessoa;
 import br.com.maria.cadpessoa.repositories.PessoaRepository;
 
+//esse controller está incompleto e errado...
 @Controller
 @RequestMapping("/")
 public class PessoaController {
