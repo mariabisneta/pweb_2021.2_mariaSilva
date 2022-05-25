@@ -1,16 +1,17 @@
 package br.com.maria.diabeteShop.diabeteShop_maria.model;
+//as classes estão incompletas. Faltam muitas anotações para elas conseguirem virar entidades do sistema.
+//nome de classe não se começa com letra minúscula, por convenção.
+public class Cliente {
 
-public class cliente {
-	
 	private Long idCliente;
 	private String nome;
-    private String genero;
+	private String genero;
 	private String rua;
 	private String bairro;
 	private String cidade;
 	private int cep;
 	private String email;
-    private int celular;
+	private int celular;
 
 	public Long getIdCliente() {
 		return idCliente;
@@ -27,7 +28,8 @@ public class cliente {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-    public String getGenero() {
+
+	public String getGenero() {
 		return genero;
 	}
 
@@ -67,7 +69,6 @@ public class cliente {
 		this.cep = cep;
 	}
 
-	
 	public String getEmail() {
 		return email;
 	}
@@ -75,13 +76,13 @@ public class cliente {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-    public int getCelular() {
+
+	public int getCelular() {
 		return celular;
 	}
 
 	public void setCelular(int celular) {
 		this.celular = celular;
 	}
-
 
 }
